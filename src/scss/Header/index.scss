@@ -1,0 +1,34 @@
+.header_container{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a{
+    padding: 15px;
+    text-decoration: none;
+    color: #ff6060;
+    h1{
+      color: #ff6060;
+      font-size: 68px;
+      @media (max-width: 460px) {
+        font-size: 35px;
+        img{
+          width: 31px;
+          height: 36px;
+        }
+      }
+    }
+  }
+  nav{
+    .nav_link{
+      padding: 15px;
+      color: #8186a0;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ff6060;
+      @media (max-width: 460px) {
+        font-size: 17px;
+      }
+    }
+  }
+}

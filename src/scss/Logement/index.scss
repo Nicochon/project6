@@ -1,0 +1,16 @@
+section{
+  display: flex;
+  justify-content: center;
+  .grid_logement{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    width: 100%;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    @media (max-width: 725px){
+      display: grid;
+      grid-template-columns: 90%;
+    }
+  }
+}

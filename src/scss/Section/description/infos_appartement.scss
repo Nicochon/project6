@@ -1,0 +1,262 @@
+.container_description{
+  .Container_section_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+    padding-top: 10px;
+    .title_profil{
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .title_localisation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .display_block{
+        display: block;
+        @media (max-width: 745px){
+          display: none;
+        }
+        .profil{
+          display: flex;
+          align-items: center;
+          .hostname{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 80px;
+            font-size: 18px;
+          }
+          img{
+            border-radius: 60px;
+            width: 64px;
+            height: 64px;
+          }
+        }
+      }
+    }
+  }
+  .container_tags_ratings{
+    display: flex;
+    justify-content: center;
+    .tags_rating{
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      @media (max-width: 745px){
+        flex-direction: column;
+
+      }
+      .tags{
+        display: flex;
+        flex-wrap: wrap;
+        a{
+          background-color: #ff6060;
+          border-radius: 10px;
+          padding: 10px;
+          color: white;
+          margin-right: 10px;
+          text-decoration: none;
+          margin-bottom: 20px;
+        }
+      }
+      .stars_host{
+        @media (max-width: 745px){
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding-top: 10px;
+        }
+        .stars_pictures{
+          @media (max-width: 745px){
+            padding-top: 30px;
+          }
+          img{
+            @media (max-width: 465px){
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        .display_block{
+          display:none;
+          @media (max-width: 745px){
+            display:block;
+          }
+          .profil{
+            display:flex;
+            align-items: flex-end;
+            justify-content: center;
+            .hostname{
+              width: 100px;
+              @media (max-width: 465px){
+                width: 55px;
+                padding-right: 70px;
+              }
+              h2{
+                font-size: 20px;
+                @media (max-width: 465px){
+                  font-size: 15px;
+                }
+              }
+            }
+            img{
+              border-radius: 60px;
+              width: 70px;
+              height: 70px;
+              @media (max-width: 465px){
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//.container_display_flex{
+//  display: flex;
+//  justify-content: center;
+//}
+//
+//.container_description_equipments{
+//  display: flex;
+//  justify-content: space-between;
+//  width: 95%;
+//  @media (max-width: 745px){
+//    display: block;
+//  }
+//  .container_logement{
+//    width: 50%;
+//    display: flex;
+//    flex-direction: column;
+//    @media (max-width: 745px){
+//      width: 100%;
+//      display: flex;
+//      align-items: center;
+//    }
+//    &.equipment{
+//      align-items: flex-end;
+//      @media (max-width: 745px){
+//        width: 100%;
+//        display: flex;
+//        align-items: center;
+//      }
+//    }
+//    .section_animation{
+//      position: relative;
+//      display: flex;
+//      justify-content: space-between;
+//      align-items: center;
+//      padding: 10px 20px;
+//      margin-top: 20px;
+//      background-color: #ff6060;
+//      color: white;
+//      width: 90%;
+//      border-radius: 10px;
+//      @media (max-width: 745px){
+//        width: 90%;
+//      }
+//      input{
+//        display: none;
+//        &:checked + .button-about {
+//          transform: rotate(180deg);
+//        }
+//      }
+//      label{
+//        transform: rotate(360deg);
+//        transition: transform 500ms ease-in-out;
+//      }
+//    }
+//
+//    .description_logement_back {
+//      margin-top: -5px;
+//      width: 100%;
+//      @media (max-width: 745px) {
+//        display: flex;
+//        justify-content: center;
+//      }
+//
+//      &.equipment {
+//        display: flex;
+//        justify-content: flex-end;
+//        @media (max-width: 745px) {
+//          display: flex;
+//          justify-content: center;
+//        }
+//      }
+//
+//      .section-description_equipment_back {
+//
+//        width: 90%;
+//        display: flex;
+//        flex-direction: column;
+//        height: 0;
+//        background: #F6F6F6;
+//        border-radius: 5px;
+//        overflow: hidden;
+//        animation: key-equipmentBack 1s;
+//        p {
+//          padding: 10px;
+//        }
+//      }
+//      //ul {
+//      //  padding: 10px;
+//      //}
+//      @keyframes key-equipmentBack {
+//        0% {
+//          height: 100%;
+//        }
+//        100% {
+//          height: 0;
+//        }
+//      }
+//    }
+//    .description_logement{
+//      margin-top: 0px;
+//      width: 100%;
+//      @media (max-width: 745px){
+//        display: flex;
+//        justify-content: center;
+//      }
+//      &.equipment{
+//        display: flex;
+//        justify-content: flex-end;
+//        @media (max-width: 745px){
+//          display: flex;
+//          justify-content: center;
+//        }
+//      }
+//      .section-description_equipment{
+//        width: 90%;
+//        display: flex;
+//        flex-direction: column;
+//        height: 100%;
+//        background: #F6F6F6;
+//        border-radius: 5px;
+//        overflow: hidden;
+//        animation: key-equipment 1s;
+//
+//        p{
+//          padding: 10px;
+//        }
+//      }
+//      //ul{
+//      //  padding: 10px;
+//      //}
+//      @keyframes key-equipment {
+//        0% {
+//          height: 0;
+//        }
+//        100% {
+//          height: 100%;
+//        }
+//      }
+//    }
+//  }
+//}
