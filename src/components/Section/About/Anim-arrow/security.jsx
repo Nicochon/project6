@@ -12,7 +12,7 @@ function SecurityAnim() {
   return (
     <div className="section_accordion-about">
       <div className="panel-title-about">
-        <h3>Security</h3>
+        <h3>Sécurité</h3>
         <input
           type="checkbox"
           id="check-click-security"

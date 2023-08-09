@@ -1,5 +1,8 @@
 .container_slider{
   position: relative;
+  .slide-none{
+    display: none;
+  }
   .slider{
     padding-bottom: 20px;
     .left_arrow{

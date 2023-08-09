@@ -22,10 +22,16 @@ const BannerDescription = ({ PicturesLogement }) => {
   return (
     <div className="container_slider">
       <div className="slider">
-        <button className="left_arrow" onClick={prevSlide}>
+        <button
+          className={length === 1 ? "slide-none" : "left_arrow"}
+          onClick={prevSlide}
+        >
           <img src={ArrowBack} alt="fleche gauche" />
         </button>
-        <button className="right_arrow" onClick={nextSlide}>
+        <button
+          className={length === 1 ? "slide-none" : "right_arrow"}
+          onClick={nextSlide}
+        >
           <img src={ArrowNext} alt="fleche droite" />
         </button>
         {PicturesLogement.map((slide, index) => {
@@ -41,7 +47,7 @@ const BannerDescription = ({ PicturesLogement }) => {
           );
         })}
       </div>
-      <p>
+      <p className={length === 1 ? "slide-none" : null}>
         {current + 1}/{length}
       </p>
     </div>

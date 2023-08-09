@@ -10,6 +10,8 @@ import "../../scss/Section/description/carrousel.scss";
 import "../../scss/Section/description/animation_texte.scss";
 import { Link } from "react-router-dom";
 import "../../scss/General/index.scss";
+import Error from "../../components/Error";
+
 function Description({
   infoLogement,
   TagsMap,
@@ -17,43 +19,49 @@ function Description({
   CarouselPictures,
 }) {
   const { KEY } = useParams();
+
+  infoLogement = null;
   Apartment.map((Liste) =>
     Liste.id === KEY ? (infoLogement = { Liste }) : null
   );
 
-  /*parcourir les infos */
-  TagsMap = infoLogement.Liste.tags.map((Tags, index) => (
-    <Link key={`${Tags}-${index}`} href="/">
-      {Tags}
-    </Link>
-  ));
+  if (infoLogement !== null) {
+    /*parcourir les infos */
+    TagsMap = infoLogement.Liste.tags.map((Tags, index) => (
+      <Link key={`${Tags}-${index}`} href="/">
+        {Tags}
+      </Link>
+    ));
 
-  EquipmentMap = infoLogement.Liste.equipments.map((Equipments, index) => (
-    <li key={`${Equipments}-${index}`}>{Equipments}</li>
-  ));
+    EquipmentMap = infoLogement.Liste.equipments.map((Equipments, index) => (
+      <li key={`${Equipments}-${index}`}>{Equipments}</li>
+    ));
 
-  CarouselPictures = infoLogement.Liste.pictures;
+    CarouselPictures = infoLogement.Liste.pictures;
 
-  return (
-    <div className="container_description">
-      <BannerDescription PicturesLogement={CarouselPictures} />
-      <SectionTitle
-        title={infoLogement.Liste.title}
-        logement={infoLogement.Liste.location}
-        hostname={infoLogement.Liste.host.name}
-        hostpicture={infoLogement.Liste.host.picture}
-      />
-      <SectionTagRating
-        tags={TagsMap}
-        hostname={infoLogement.Liste.host.name}
-        hostpicture={infoLogement.Liste.host.picture}
-      />
-      <div className="section_accordion">
-        <SectionDescription description={infoLogement.Liste.description} />
-        <SectionEquipements equipments={EquipmentMap} />
+    return (
+      <div className="container_description">
+        <BannerDescription PicturesLogement={CarouselPictures} />
+        <SectionTitle
+          title={infoLogement.Liste.title}
+          logement={infoLogement.Liste.location}
+          hostname={infoLogement.Liste.host.name}
+          hostpicture={infoLogement.Liste.host.picture}
+        />
+        <SectionTagRating
+          tags={TagsMap}
+          hostname={infoLogement.Liste.host.name}
+          hostpicture={infoLogement.Liste.host.picture}
+        />
+        <div className="section_accordion">
+          <SectionDescription description={infoLogement.Liste.description} />
+          <SectionEquipements equipments={EquipmentMap} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <Error />;
+  }
 }
 
 export default Description;

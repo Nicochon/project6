@@ -13,7 +13,7 @@ function SectionEquipements({ equipments }) {
   return (
     <div className="panel">
       <div className="panel-title">
-        <h3>Equipment</h3>
+        <h3>Équipement</h3>
         <input
           type="checkbox"
           id="check-click-equipment"
